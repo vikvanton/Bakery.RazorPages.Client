@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Net.Mime;
+using Bakery.RazorPages.Client.Services;
 
 namespace Bakery.RazorPages.Client
 {
@@ -24,6 +26,16 @@ namespace Bakery.RazorPages.Client
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddHttpClient<ProductService>(config => {
+                config.BaseAddress = new Uri(Configuration["ProductService:BaseAddress"]);
+                config.DefaultRequestHeaders.Add("Accept", MediaTypeNames.Application.Json);
+            });
+
+            services.AddHttpClient<OrderService>(config => {
+                config.BaseAddress = new Uri(Configuration["OrderService:BaseAddress"]);
+                config.DefaultRequestHeaders.Add("Accept", MediaTypeNames.Application.Json);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

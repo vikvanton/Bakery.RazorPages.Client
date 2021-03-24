@@ -79,3 +79,6 @@ C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\obj\Debug\net5.
 C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\obj\Debug\net5.0\Bakery.RazorPages.Client.genruntimeconfig.cache
 C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\obj\Debug\net5.0\Bakery.RazorPages.Client.csproj.CopyComplete
 C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\obj\Debug\net5.0\Razor\Pages\About.cshtml.g.cs
+C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\melm_\source\repos\SE_Labs_Pic\Bakery.RazorPages.Client\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

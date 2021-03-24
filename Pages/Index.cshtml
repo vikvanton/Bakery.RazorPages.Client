@@ -3,8 +3,38 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Welcome to Fourth Coffee!</h1>
+<hr />
+<div class="row"> 
+    <div class="col-sm-8">
+        <img alt="Featured Product" src="~/images/Products/@Model.FeaturedProduct.ImageName" class="img-fluid rounded"/>
+    </div>
+    <div class="col-sm-4">
+        <div>
+            <h2>@Model.FeaturedProduct.Name</h2>
+            <p>@($"{Model.FeaturedProduct.Price:C}")</p>
+            <p>@Model.FeaturedProduct.Description</p>
+        </div>
+        <div>
+            <a class="btn btn-sm btn-danger" asp-page="/order" asp-route-id="@Model.FeaturedProduct.Id" title="Order @Model.FeaturedProduct.Name">Order Now</a>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="row">
+@foreach (var product in Model.Products)
+{
+    <div class="col-sm-3">
+        <div>
+            <h3>@product.Name</h3>
+            <img class="product-image img-fluid img-thumbnail" src="~/images/Products/Thumbnails/@product.ImageName" alt="Image of @product.Name" />
+            <p class="description">@product.Description</p>
+        </div>
+        <div>
+            <p>@($"{product.Price:C}")</p>
+            <a class="btn btn-sm btn-danger" asp-page="/order" asp-route-id="@product.Id" title="Order @product.Name">Order Now</a>
+        </div>
+        <p />
+    </div>
+}
 </div>

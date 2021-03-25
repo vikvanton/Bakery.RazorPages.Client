@@ -15623,6 +15623,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\melm_\\source\\repos\\SE_Labs_Pic\\Bakery.RazorPages.Client\\Pages\\Order.cshtml",
+      "TargetPath": "Pages\\Order.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\melm_\\source\\repos\\SE_Labs_Pic\\Bakery.RazorPages.Client\\Pages\\OrderSuccess.cshtml",
+      "TargetPath": "Pages\\OrderSuccess.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\melm_\\source\\repos\\SE_Labs_Pic\\Bakery.RazorPages.Client\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

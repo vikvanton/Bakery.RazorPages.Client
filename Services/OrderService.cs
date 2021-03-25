@@ -1,6 +1,5 @@
 using Bakery.RazorPages.Client.Models;
 using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 

@@ -3,14 +3,14 @@
 @{
     ViewData["Title"] = "Place Your Order";
 }
+<hr />
 <ol id="orderProcess">
     <li><span class="step-number">1</span>Choose Item</li>
     <li class="current"><span class="step-number">2</span>Details &amp; Submit</li>
     <li><span class="step-number">3</span>Receipt</li>
 </ol>
-
+<hr />
 <h1>Place Your Order: @Model.Product.Name</h1>
-
 <form method="post">
     <div class="row">
         <div class="col-3">
@@ -47,7 +47,7 @@
                 <li class="shipping">
                     <div class="form-group">
                         <label asp-for="Order.OrderShipping"></label>
-                        <textarea rows="4" asp-for="Order.OrderShipping" class="form-control form-control-sm"></textarea>               
+                        <input asp-for="Order.OrderShipping" class="form-control form-control-sm"></textarea>               
                         <span asp-validation-for="Order.OrderShipping"></span>
                     </div>
                 </li>
@@ -69,3 +69,6 @@
         </div>
     </div>
 </form>
+@section scripts{
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

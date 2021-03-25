@@ -1,6 +1,7 @@
 ﻿@page
 @model Bakery.RazorPages.Client.Pages.OrderSuccessModel
 @{
+    ViewData["Title"] = "Order Confirmation";
 }
 <ol id="orderProcess">
     <li><span class="step-number">1</span>Choose Item</li>
@@ -8,3 +9,5 @@
     <li class="current"><span class="step-number">3</span>Receipt</li>
 </ol>
 <h1>Order Confirmation</h1>
+<hr />
+<p> The order has been created! Detailed information has been send to your email. </p>

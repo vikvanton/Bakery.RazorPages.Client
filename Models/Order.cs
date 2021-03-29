@@ -22,12 +22,15 @@ namespace Bakery.RazorPages.Client.Models
         [Required]
         public string OrderShipping { get; set; }
 
-        [Display(Name = "Ordered product")]
         [Required]
         public string OrderProduct { get; set; } 
 
         [Display(Name = "Quantity")]
         [Required]
+        [Range(1,100)]
         public int OrderQuantity { get; set; } = 1;
+
+        [Required]
+        public string OrderStatus {get; set; }
     }
 }

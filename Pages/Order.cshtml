@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Place Your Order";
 }
+<h1>Place Your Order: @Model.Product.Name</h1>
 <hr />
 <ol id="orderProcess">
     <li><span class="step-number">1</span>Choose Item</li>
@@ -10,7 +11,6 @@
     <li><span class="step-number">3</span>Receipt</li>
 </ol>
 <hr />
-<h1>Place Your Order: @Model.Product.Name</h1>
 <form method="post">
     <div class="row">
         <div class="col-3">
@@ -62,6 +62,10 @@
                         <span asp-validation-for="Order.OrderQuantity"></span>
                     </div>
                 </li>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Order.OrderStatus" value="NEW" />
+                    <span asp-validation-for="Order.OrderStatus"></span>
+                </div>
             </ul>
             <p class="actions">
                 <button class="btn btn-danger order-button">Place Order</button>

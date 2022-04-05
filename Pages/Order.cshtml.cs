@@ -63,7 +63,7 @@ namespace Bakery.RazorPages.Client.Pages
                     message.Subject = "Fourth Coffee - New Order";
                     message.Body = body;
                     message.IsBodyHtml = true;
-                    message.From = new MailAddress("gaisericvandalorum@gmail.com");
+                    message.From = new MailAddress(" "); // replace with valid value
                     await smtp.SendMailAsync(message);
                 }        
                 return RedirectToPage("OrderSuccess");
